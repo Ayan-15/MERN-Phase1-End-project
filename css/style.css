@@ -1,0 +1,248 @@
+/* css/style.css */
+
+/* ---- Base ---- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: #f6f7fb;
+  color: #111;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { margin: 0 0 0.5rem; }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ---- Login (index.html) ---- */
+.login-box {
+  max-width: 420px;
+  margin: 1.25rem auto;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+}
+
+.login-box label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  margin-top: 0.35rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  outline: none;
+}
+
+.login-box input:focus {
+  border-color: #6a7cff;
+  box-shadow: 0 0 0 3px rgba(106, 124, 255, 0.18);
+}
+
+.error {
+  margin: 0.75rem 0;
+  color: #b00020;
+  min-height: 1.2em; /* keeps layout stable */
+}
+
+button {
+  padding: 0.6rem 0.9rem;
+  margin-top: 0.9rem;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover { background: #f1f1f1; }
+button:active { transform: translateY(1px); }
+
+/* ---- Topbar / Nav (menu + cart) ---- */
+.topbar {
+  background: #fff;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.nav-link:hover { background: #f1f1f1; }
+
+/* ---- Status messages ---- */
+#statusMsg, #cartMsg {
+  margin: 0.75rem 0;
+  min-height: 1.2em;
+}
+
+/* ---- Menu layout ---- */
+.menu-section { margin-top: 0.75rem; }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.menu-card {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.menu-desc {
+  color: #444;
+  margin: 0.25rem 0 0.6rem;
+}
+
+.menu-price {
+  font-weight: 700;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.add-btn {
+  border-color: #6a7cff;
+  background: #6a7cff;
+  color: #fff;
+}
+
+.add-btn:hover { filter: brightness(0.95); }
+
+/* ---- Cart layout ---- */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.cart-row {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr 120px 240px;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cart-left { font-weight: 600; }
+.cart-mid { color: #333; text-align: left; }
+
+.cart-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cart-qty {
+  display: inline-block;
+  min-width: 28px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cart-totals {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+/* ---- Footer ---- */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+}
+
+/* ---- Small screens ---- */
+@media (max-width: 700px) {
+  .cart-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .cart-right { justify-content: flex-start; }
+}
+
+
+/* ---- Order Summary (after Place Order) ---- */
+
+.summary-row {
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.total-items {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Individual product lines */
+.product-name {
+  margin: 0.4rem 0;
+  padding-left: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Final total amount */
+.total-amount {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-top: 2px solid #e0e0e0;
+}
+
+/* Optional: success message styling */
+#cartMsg {
+  font-weight: 600;
+  color: #0a7a28;   /* green success */
+}

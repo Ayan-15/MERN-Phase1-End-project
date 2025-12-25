@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Food Ordering App</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Food Menu</h1>
+        <nav class="nav">
+            <a href="cart.html" class="nav-link" aria-label="Go to cart page">
+                Cart (<span id="cartCount">0</span>)
+            </a>
+            <a href="index.html" class="nav-link">Logout</a>
+        </nav>
+    </header>
+
+    <section class="menu-section">
+        <h2 id="menuTitle">Available Items</h2>
+        <p id="menuHelp">Browse items and add them to your cart.</p>
+
+        <!-- Status messages for loading/errors -->
+        <p id="statusMsg" role="status" aria-live="polite"></p>
+
+        <!-- Menu items will be injected here by JS -->
+        <div id="menuGrid" class="menu-grid" aria-describedby="menuHelp"></div>
+
+        <aside class="cart-summary" aria-labelledby="cartSummaryTitle">
+            <h2 id="cartSummaryTitle">Cart Summary</h2>
+
+            <p>
+                Items in cart:
+                <strong><span id="summaryCount">0</span></strong>
+            </p>
+
+            <p>
+                Total:
+                <strong>$<span id="summaryTotal">0.00</span></strong>
+            </p>    
+            <button id="goToCartBtn" type="button">View Cart</button>
+            <button id="clearCartBtn" type="button">Clear Cart</button>
+        </aside>
+
+
+        <footer class="footer">
+            <small>Food Ordering App — Phase-1 Project</small>
+        </footer>
+
+        <script src="js/menu.js"></script>
+    </section>
+</body>
+
+</html>

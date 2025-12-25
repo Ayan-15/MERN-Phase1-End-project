@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Food Ordering App</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Your Cart</h1>
+        <nav class="nav">
+            <a class="nav-link" href="menu.html">Back to Menu</a>
+            <a class="nav-link" href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <p id="cartMsg" role="status" aria-live="polite"></p>
+
+        <!-- Cart items will be rendered here -->
+        <div id="cartList" class="cart-list"></div>
+        <section id="cartTotals" class="cart-totals" aria-label="Cart totals">
+            <p id="items">
+                Items:
+                <strong><span id="cartCount">0</span></strong>
+            </p>
+            <p id="total">
+                Total:
+                <strong>$<span id="cartTotal">0.00</span></strong>
+            </p>
+        </section>
+        <section id="cartActions" class="cart-actions">
+            <button id="clearCartBtn" type="button">Clear Cart</button>
+            <button id="placeOrderBtn" type="button">Place Order</button>
+        </section>
+    </main>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

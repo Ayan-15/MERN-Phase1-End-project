@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin login - Food Ordering App</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <h1>Welcome !! Enter your admin credentials</h1>
+
+    <div class="login-box" aria-labelledby="loginTitle">
+        <h2 id="loginTitle">Login</h2>
+        <p id="loginDesc">Admin access</p>
+
+        <form id="loginForm" aria-describedby="loginDesc">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" aria-required="true" autocomplete="username"
+                    aria-describedby="errorMsg" required>
+                <!-- <small id="emailHint">Example: admin@food.com</small> -->
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" aria-required="true"
+                    autocomplete="current-password" aria-describedby="errorMsg" required>
+                <!-- <small id="passHint">Demo password: admin123</small> -->
+            </div>
+
+            <p id="errorMsg" class="error" role="alert" aria-live="polite"></p>
+
+            <button type="submit">Login</button>
+            <button type="reset">Reset</button>
+        </form>
+        <!-- <small>Demo: admin@food.com / admin123</small> -->
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
