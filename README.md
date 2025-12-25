@@ -64,7 +64,7 @@ Password: admin123
 
 ---
 
-## 🧠 Technical Design Decisions
+## Technical Design Decisions
 
 - **Vanilla JavaScript only** (no frameworks)
 - DOM created dynamically using `document.createElement`
@@ -76,25 +76,26 @@ Password: admin123
 ---
 
 ## 📂 Project Structure
-
-project-root/
-│
-├── index.html # Login page
-├── menu.html # Menu page
-├── cart.html # Cart & order summary page
-│
-├── css/
-│ └── style.css # Application styling
-│
-├── js/
-│ ├── login.js # Login logic
-│ ├── menu.js # Menu rendering & cart add logic
-│ └── cart.js # Cart rendering & order summary
-│
-├── data/
-│ └── menu.json # Menu data
-│
-└── README.md
+```
+      project-root/
+      │
+      ├── index.html # Login page
+      ├── menu.html # Menu page
+      ├── cart.html # Cart & order summary page
+      │
+      ├── css/
+      │ └── style.css # Application styling
+      │
+      ├── js/
+      │ ├── login.js # Login logic
+      │ ├── menu.js # Menu rendering & cart add logic
+      │ └── cart.js # Cart rendering & order summary
+      │
+      ├── data/
+      │ └── menu.json # Menu data
+      │
+      └── README.md
+```
 
 
 ## ▶️ How to Run the Project
